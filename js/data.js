@@ -9,6 +9,7 @@ function migratePitch(arr) {
 
 const speakers = [
   // ★★★ HIGH PRIORITY
+  {jp:'パオロ・アルドイーノ', en:'Paolo Ardoino', company:'Tether', role:'CEO', cat:'ステーブルコイン', catEn:'Stablecoin', desc:'世界最大のステーブルコインUSDT発行元TetherのCEO。ヘッドラインスピーカー。ステーブルコイン市場の最重要人物。JPYR（JPYステーブルコイン）のベンチマーク・提携候補として最重要。', descEn:'CEO of Tether, issuer of USDT — the world\'s largest stablecoin. Headline speaker. The most important figure in the stablecoin market. Top priority benchmark and partnership candidate for JPYR (JPY stablecoin).', photo:null, priority:'high', pitch:['jpyr'], isNew:true},
   {jp:'ジャック・マラーズ', en:'Jack Mallers', company:'Strike / Twenty One', role:'Founder, CEO', cat:'決済', catEn:'Payments', desc:'BitcoinライトニングネットワークPayment \"Strike\" のCEO。Michael Saylor出資のBTC積み立て企業Twenty OneのCEOも兼務。世界最大級のBitcoin決済インフラを運営。', descEn:'CEO of Strike, a Bitcoin Lightning Network payment platform. Also CEO of Twenty One, a BTC accumulation company backed by Michael Saylor. Operates one of the world\'s largest Bitcoin payment infrastructures.', photo:'69a700294d8a7f5740ab35d6_8c523bd71bea2a10339e1057.webp', priority:'high', pitch:['jpyr'], isNew:true},
   {jp:'デビッド・マーカス', en:'David Marcus', company:'Lightspark', role:'CEO', cat:'決済・Fintech', catEn:'Payments/Fintech', desc:'元PayPal社長、元Meta（Libra/Diem）決済・暗号資産責任者。現在はBitcoinのライトニング決済インフラLightsparkを経営。決済ネットワークの世界的権威。', descEn:'Former PayPal President, former Meta (Libra/Diem) head of payments & crypto. Currently runs Lightspark, a Bitcoin Lightning payment infrastructure. Global authority on payment networks.', photo:'699dd5f3c2e771455be54a6b_7f9d35a485ae8e0c1ce3f563.webp', priority:'high', pitch:['jpyr'], isNew:true},
   {jp:'デイブ・リプレー', en:'Dave Ripley', company:'Kraken', role:'co-CEO', cat:'取引所', catEn:'Exchange', desc:'世界大手暗号資産取引所KrakenのCEO。JPYR上場の最優先候補。Krakenは機関投資家から個人まで幅広いユーザー基盤を持つ。', descEn:'CEO of Kraken, a major global crypto exchange. Top priority candidate for JPYR listing. Kraken serves a broad user base from institutional to retail investors.', photo:'69b40f46edfb35e8245faf34_6cf27b2a991dc42ce1c218b9.webp', priority:'high', pitch:['jpyr'], isNew:true},
@@ -21,6 +22,9 @@ const speakers = [
   {jp:'アレクサンダー・ブルーム', en:'Alexander Blume', company:'Two Prime', role:'CEO', cat:'投資', catEn:'Investment', desc:'Two Prime CEOはBitcoin特化インベストメントファーム。機関投資家向けBitcoin金融サービスを提供。STOトークンのファンドパートナー候補として高優先度。', descEn:'CEO of Two Prime, a Bitcoin-focused investment firm providing institutional Bitcoin financial services. High priority candidate as STO token fund partner.', photo:'69b9607d95d1faca2266e232_36233596ed7aaad598866a81.webp', priority:'high', pitch:['sto'], isNew:true},
 
   // ★★ MED PRIORITY
+  {jp:'ティム・ドレイパー', en:'Tim Draper', company:'Draper Associates', role:'Founder', cat:'VC・投資家', catEn:'VC/Investor', desc:'シリコンバレーの伝説的VC。Skype、Tesla、SpaceX、Coinbase等に初期投資。Bitcoin強気派として著名。ヘッドラインスピーカー。STOトークンの初期投資家・権威付けとして最重要級。', descEn:'Legendary Silicon Valley VC. Early investor in Skype, Tesla, SpaceX, Coinbase. Well-known Bitcoin bull. Headline speaker. Top-tier candidate for STO token early investor and endorsement.', photo:null, priority:'med', pitch:['sto'], isNew:true},
+  {jp:'エイミー・オルデンバーグ', en:'Amy Oldenburg', company:'Morgan Stanley', role:'Head of Digital Asset Strategy', cat:'機関投資家', catEn:'Institutional Investor', desc:'Morgan Stanleyのデジタル資産戦略責任者。世界最大級の金融機関からの参加。STOトークンの機関投資家パートナーとして超有望。', descEn:'Head of Digital Asset Strategy at Morgan Stanley. Participation from one of the world\'s largest financial institutions. Extremely promising as an institutional investor partner for STO token.', photo:null, priority:'med', pitch:['sto'], isNew:true},
+  {jp:'タレク・マンスール', en:'Tarek Mansour', company:'Kalshi', role:'Co-Founder & CEO', cat:'予測市場', catEn:'Prediction Market', desc:'CFTC規制の予測市場プラットフォームKalshiのCEO。規制対応フィンテックのリーダー。IZAKAYAウォレット連携候補。', descEn:'CEO of Kalshi, a CFTC-regulated prediction market platform. Leader in regulatory-compliant fintech. Candidate for IZAKAYA wallet integration.', photo:null, priority:'med', pitch:['izakaya'], isNew:true},
   {jp:'マイケル・セイラー', en:'Michael Saylor', company:'Strategy', role:'Founder & Executive Chairman', cat:'投資家・経営者', catEn:'Investor/Executive', desc:'ビットコイン最大の法人保有者。StrategyはBTC700億円超を保有する上場企業。Bitcoin標準の最も著名な提唱者。STOトークンの権威付け・アドバイザーとして名前を使えれば大きい。', descEn:'Largest corporate Bitcoin holder. Strategy is a public company holding 70B+ yen in BTC. Most prominent advocate of the Bitcoin standard. Having his name as STO token authority/advisor would be significant.', photo:'6972a319649d47b55c230191_N_DTZy4vdL3S85JV5FQvEYJ7IEU9wAIyjyE8Rad58lc.webp', priority:'med', pitch:['sto'], isNew:false},
   {jp:'フォング・レ', en:'Phong Le', company:'Strategy', role:'President & CEO', cat:'投資家', catEn:'Investor', desc:'StrategyのCEO（Michael Saylor直下）。実務的意思決定はPhong Leが担う。STOトークンとStrategy/MicroStrategyモデルの類似性から話が合いやすい。', descEn:'CEO of Strategy (directly under Michael Saylor). Handles practical decision-making. Natural conversation given the similarity between STO token and Strategy/MicroStrategy model.', photo:'69bc37821c4f113994d21633_6568f218c940cd2dbc453138.webp', priority:'med', pitch:['sto'], isNew:true},
   {jp:'デラル・イスリム', en:'Derar Islim', company:'Antalpha', role:'COO / CEO Americas & EMEA', cat:'金融サービス', catEn:'Financial Services', desc:'NASDAQ上場デジタル資産金融サービス大手AntalplhaのCOO。元Genesis暫定CEO。デリバティブと構造化クレジット専門。機関向けファイナンシングでSTOトークン・JPYR両方に関連。', descEn:'COO of Antalpha, a NASDAQ-listed digital asset financial services firm. Former interim CEO of Genesis. Derivatives and structured credit specialist. Relevant to both STO token and JPYR for institutional financing.', photo:'69777c5b7805a0ced0012d6e_6ssEg0zG1BaZ5feBnH1fpUblOPCjL0mEAs1DymCgK9k.webp', priority:'med', pitch:['sto','jpyr'], isNew:false},
@@ -40,6 +44,14 @@ const speakers = [
   {jp:'アイリーン・ガオ', en:'Irene Gao', company:'Bitmain', role:'President of Mining', cat:'マイニング', catEn:'Mining', desc:'世界最大のBitcoinマイニング機器メーカーBitmainのPresident of Mining。Bitmainは月間スポンサー（Moon tier）。業界でのブランド認知に有用。', descEn:'President of Mining at Bitmain, the world\'s largest Bitcoin mining equipment manufacturer. Bitmain is a Moon tier sponsor. Useful for brand recognition in the industry.', photo:'68fa74246d4060b0c4c6561c_682e12809ea6ac541e0fbe22_fKlkhwJR4GBZRHV8iWGuf3VxZjTod8LiTMVoBRFKzZE.webp', priority:'med', pitch:['net'], isNew:true},
 
   // ★ LOW PRIORITY
+  {jp:'バーニー・モレノ', en:'Bernie Moreno', company:'U.S. Senate', role:'Senator', cat:'政治家', catEn:'Politician', desc:'オハイオ州選出の上院議員。クリプトフレンドリーな議員として知られ、銀行委員会でデジタル資産政策を推進。規制対応の文脈でネットワーキング価値あり。', descEn:'Ohio Senator known as a crypto-friendly legislator. Advancing digital asset policy on the Banking Committee. Valuable for regulatory networking.', photo:null, priority:'low', pitch:['net'], isNew:true},
+  {jp:'アマンダ・ファビアーノ', en:'Amanda Fabiano', company:'Nakamoto Inc.', role:'COO', cat:'経営', catEn:'Executive', desc:'Nakamoto Inc.（Bitcoin Magazine親会社）のCOO。David Baileyの右腕として運営全般を統括。カンファレンス主催側との関係構築に有用。', descEn:'COO of Nakamoto Inc. (parent of Bitcoin Magazine). David Bailey\'s right hand, overseeing overall operations. Useful for building relationships with conference organizers.', photo:null, priority:'low', pitch:['net'], isNew:true},
+  {jp:'アナイゼ・カニンバ', en:'Anaise Kanimba', company:'Africa Bitcoin Institute', role:'Founder & Executive Director', cat:'非営利', catEn:'Nonprofit', desc:'Africa Bitcoin Instituteの創業者兼事務局長。アフリカ地域でのBitcoin教育・普及を推進。グローバルネットワーキング。', descEn:'Founder & Executive Director of Africa Bitcoin Institute. Promoting Bitcoin education and adoption across Africa. Global networking.', photo:null, priority:'low', pitch:['net'], isNew:true},
+  {jp:'アンドリュー・ビギン', en:'Andrew Begin', company:'Galoy', role:'Chief Strategy Officer', cat:'技術', catEn:'Technology', desc:'Bitcoin Banking OSプラットフォームGaloyのCSO。Lightning決済インフラ。IZAKAYAウォレットの技術連携候補。', descEn:'CSO of Galoy, a Bitcoin Banking OS platform. Lightning payment infrastructure. Candidate for IZAKAYA wallet technical integration.', photo:null, priority:'low', pitch:['izakaya'], isNew:true},
+  {jp:'アレクサンドル・レゼ', en:'Alexandre Laizet', company:'Capital B', role:'Board Director of Bitcoin Strategy', cat:'投資', catEn:'Investment', desc:'Capital BのBitcoin戦略取締役。機関投資家向けBitcoin戦略を推進。STOトークン・JPYRの文脈でネットワーキング価値あり。', descEn:'Board Director of Bitcoin Strategy at Capital B. Promoting institutional Bitcoin strategy. Networking value in STO token and JPYR context.', photo:null, priority:'low', pitch:['sto'], isNew:true},
+  {jp:'アリ・ターガー', en:'Ali Tager', company:'National Cryptocurrency Association', role:'VP, External Affairs', cat:'業界団体', catEn:'Industry Association', desc:'National Cryptocurrency AssociationのVP。業界ロビイング・規制対応の文脈でネットワーキング。', descEn:'VP of External Affairs at National Cryptocurrency Association. Networking for industry lobbying and regulatory engagement.', photo:null, priority:'low', pitch:['net'], isNew:true},
+  {jp:'アレン・ヘルム', en:'Allen Helm', company:'BTC Inc.', role:'Director of Business Development, Treasuries', cat:'ビジネス開発', catEn:'Business Development', desc:'BTC Inc.の財務向け事業開発ディレクター。Bitcoin for Corporationsプログラムの担当。法人向けBTC戦略の文脈で有用。', descEn:'Director of BD for Treasuries at BTC Inc. Manages Bitcoin for Corporations program. Useful in corporate BTC strategy context.', photo:null, priority:'low', pitch:['net'], isNew:true},
+  {jp:'アフロマン', en:'Afroman', company:'(Independent)', role:'Rapper / Cultural Speaker', cat:'エンターテインメント', catEn:'Entertainment', desc:'グラミーノミネートのラッパー。Bitcoin 2026カルチャー枠のスピーカー。ブース集客・SNS映えに活用。', descEn:'Grammy-nominated rapper. Cultural speaker at Bitcoin 2026. Useful for booth traffic and social media engagement.', photo:null, priority:'low', pitch:['media'], isNew:true},
   {jp:'ポール・アトキンス', en:'Paul Atkins', company:'SEC', role:'Chairman', cat:'規制当局', catEn:'Regulator', desc:'トランプ大統領が指名した第34代SEC議長。クリプトフレンドリーな規制当局トップ。直接営業は難しいが、挨拶・名刺交換でコンプライアンス文脈を得られる。', descEn:'34th SEC Chairman nominated by President Trump. Crypto-friendly regulatory leader. Hard to do direct sales, but a greeting and card exchange provides compliance context.', photo:'6972a307e8c4e395e94eeb3e_2BzOTwTGF_fgb-5GSlEDzb9jrPlqtD4jYf_QK-9iMHI.webp', priority:'low', pitch:['net'], isNew:false},
   {jp:'マイク・セリグ', en:'Mike Selig', company:'CFTC', role:'Chairman', cat:'規制当局', catEn:'Regulator', desc:'2025年12月就任の第16代CFTC議長。前SEC暗号資産タスクフォースの主任顧問。デジタル資産規制の整合化を主導中。', descEn:'16th CFTC Chairman, took office December 2025. Former SEC crypto task force chief counsel. Leading harmonization of digital asset regulation.', photo:'6972a311ea31b2d42d6a99e8_DBuk5h4LfBOwRTGddYSvuMUK_zC0GSwDzYx0-cz1K24.webp', priority:'low', pitch:['net'], isNew:false},
   {jp:'シンシア・ラミス', en:'Cynthia Lummis', company:'U.S. Senate', role:'Senator', cat:'政治家', catEn:'Politician', desc:'「クリプト・クイーン」の異名を持つワイオミング州選出上院議員。BITCOIN法（米国戦略的BTC備蓄法案）の発案者。', descEn:'Wyoming Senator known as the "Crypto Queen". Originator of the BITCOIN Act (US strategic BTC reserve bill).', photo:'69a99c8c09404f6a5e4965dc_3oWm6lqlCM3ZI7GxiMbOUfL9VKWVxLeE8iFkiDitm4s.webp', priority:'low', pitch:['net'], isNew:true},
@@ -198,6 +210,15 @@ const speakerTwitter = {
   'Alex Pruden':'p11qtm',
   'Matt Schultz':'mattcshultz',
   'Irene Gao':'BITMAINtech',
+  'Paolo Ardoino':'paaborner',
+  'Tim Draper':'TimDraper',
+  'Amy Oldenburg':'amyoldenburg',
+  'Tarek Mansour':'tarekmansour',
+  'Bernie Moreno':'berniemoreno',
+  'Amanda Fabiano':'AmandaFabiano',
+  'Anaise Kanimba':'AnaiseFaith',
+  'Andrew Begin':'andrewbegin',
+  'Alexandre Laizet':'AlexandreLaizet',
 };
 
 const speakerWebsite = {
@@ -248,6 +269,15 @@ const speakerWebsite = {
   'Alex Lewin':'https://www.fedi.xyz',
   'Jörg Guido Hülsmann':'https://mises.org',
   'Kenny Florian':'https://www.kennyflorian.com',
+  'Paolo Ardoino':'https://tether.to',
+  'Tim Draper':'https://www.draper.vc',
+  'Amy Oldenburg':'https://www.morganstanley.com',
+  'Tarek Mansour':'https://kalshi.com',
+  'Bernie Moreno':'https://www.moreno.senate.gov',
+  'Amanda Fabiano':'https://nakamoto.com',
+  'Anaise Kanimba':'https://africabitcoininstitute.org',
+  'Andrew Begin':'https://galoy.io',
+  'Alexandre Laizet':'https://capitalb.com',
 };
 
 const sponsorTwitter = {
