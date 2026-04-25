@@ -516,6 +516,7 @@ function renderSpeakers() {
       <div class="card-links">
         ${tw ? `<a href="https://x.com/${tw}" target="_blank">𝕏 @${tw}</a>` : ''}
         ${web ? `<a href="${web}" target="_blank">🌐 Website</a>` : ''}
+        ${s.linkedin ? `<a href="${s.linkedin}" target="_blank">💼 LinkedIn</a>` : ''}
       </div>
       ${managementSectionHTML('speaker', name, effPri, effPitches)}
       ${memoHTML('speaker', name)}
