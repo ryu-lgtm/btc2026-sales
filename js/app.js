@@ -6,7 +6,7 @@ const _lang = getLang();
 
 const _i18n = {
   title:          { ja: 'JPYR Sales — Bitcoin 2026 営業リスト', en: 'JPYR Sales — Bitcoin 2026 Outreach List' },
-  meta:           { ja: '4/27〜29 @ The Venetian, Las Vegas ｜ 更新: 2026-03-30', en: 'Apr 27–29 @ The Venetian, Las Vegas ｜ Updated: 2026-03-30' },
+  meta:           { ja: '4/27〜29 @ The Venetian, Las Vegas ｜ 更新: 2026-04-25', en: 'Apr 27–29 @ The Venetian, Las Vegas ｜ Updated: 2026-04-25' },
   shareNote:      { ja: '🔗 URLを共有するだけで閲覧・編集可能', en: '🔗 Share the URL to view & edit' },
   connecting:     { ja: '接続中...', en: 'Connecting...' },
   synced:         { ja: '同期中', en: 'Synced' },
