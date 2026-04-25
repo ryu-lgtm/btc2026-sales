@@ -104,6 +104,9 @@ const speakers = [
   {jp:'アンディ・スクーノバー', en:'Andy Schoonover', company:'CrowdHealth', role:'CEO', cat:'ヘルスケア', catEn:'Healthcare', desc:'CrowdHealth のCEO。Bitcoin 文脈のヘルスケアサービス。', descEn:'CEO of CrowdHealth. Healthcare service in Bitcoin context.', photo:'69456dee4fbb7020ac5194c2_79f90ac6d6d455e88066684f.webp', priority:'low', pitch:['other'], isNew:true},
   {jp:'アンナ・チェホビッチ', en:'Anna Chekhovich', company:'Anti-Corruption Foundation', role:'Financial Director', cat:'非営利', catEn:'Nonprofit', desc:'Anti-Corruption Foundation のファイナンシャルディレクター。', descEn:'Financial Director at Anti-Corruption Foundation.', photo:'69df7948a4f2a0d4c2b3bf07__08sdPoXQQ2GAvTioAaqEXcz5UAfvaw4fGSnQoXL2DY.webp', priority:'low', pitch:['other'], isNew:true},
   {jp:'アン・ピーツ', en:'Anne Peetz', company:'Reed Smith LLP', role:'Partner', cat:'法律', catEn:'Legal', desc:'Reed Smith LLP のパートナー弁護士。', descEn:'Partner at Reed Smith LLP.', photo:'69d958cb0f0d5b636a3fdf71_f0ce6aaa2cf0dd96a840693e.webp', priority:'low', pitch:['other'], isNew:true},
+  {jp:'ジャック・ドーシー', en:'Jack Dorsey', company:'(Independent)', role:'Speaker', cat:'その他', catEn:'Other', desc:'Bitcoin 2026 スピーカー。', descEn:'Bitcoin 2026 speaker.', photo:null, priority:'low', pitch:['other'], isNew:true},
+  {jp:'トッド・ブランシュ', en:'Todd Blanche', company:'U.S. Department of Justice', role:'Acting Attorney General', cat:'政府・規制', catEn:'Government/Regulation', desc:'米国司法省のActing Attorney General。', descEn:'Acting Attorney General at U.S. Department of Justice.', photo:null, priority:'low', pitch:['other'], isNew:true},
+  {jp:'カッシュ・パテル', en:'Kash Patel', company:'U.S. Federal Bureau of Investigation', role:'Director', cat:'政府・規制', catEn:'Government/Regulation', desc:'米国FBI長官。', descEn:'Director of U.S. Federal Bureau of Investigation.', photo:null, priority:'low', pitch:['other'], isNew:true},
 ];
 
 const sponsors = {
@@ -135,6 +138,7 @@ const sponsors = {
     {name:'Unchained', url:'https://unchained.com', cat:'金融サービス', catEn:'Financial Services', desc:'🆕 Bitcoin-native金融サービス、マルチシグカストディ。JPYR・STO文脈で有用。', descEn:'Bitcoin-native financial services and multisig custody. Useful in JPYR and STO context.', pitch:['jpyr','sto'], isNew:true},
     {name:'Y Whales', url:'#', cat:'コミュニティ', catEn:'Community', desc:'🆕 Bitcoin Whaleコミュニティ。高額投資家ネットワーキング。', descEn:'Bitcoin Whale community. High-value investor networking.', pitch:['sto'], isNew:true},
     {name:'Coinbase', url:'https://www.coinbase.com', cat:'取引所', catEn:'Exchange', desc:'🆕 米国最大の上場暗号資産取引所(NASDAQ: COIN)。JPYR上場の最重要候補の一つ。Faryar Shirzad（CPO）とPaul Grewal（CLO）がスピーカー。', descEn:'Largest US publicly traded crypto exchange (NASDAQ: COIN). One of the top candidates for JPYR listing. Faryar Shirzad (CPO) and Paul Grewal (CLO) are speakers.', pitch:['jpyr'], isNew:true},
+    {name:'Kalshi', url:'#', cat:'予測市場', catEn:'Prediction Market', desc:'予測市場プラットフォーム。Tarek Mansour CEOがスピーカー。', descEn:'Prediction market platform. Tarek Mansour CEO is a speaker.', pitch:['other'], isNew:true},
   ],
   block2: [
     {name:'Bitdeer', url:'https://www.bitdeer.com/', cat:'マイニング', catEn:'Mining', desc:'世界有数のBitcoinマイニングサービスプロバイダー', descEn:'One of the world\'s leading Bitcoin mining service providers.', pitch:['net'], isNew:false},
@@ -163,6 +167,8 @@ const sponsors = {
     {name:'Moonshot', url:'https://moonshot.money', cat:'フィンテック', catEn:'Fintech', desc:'🆕 2000万人超ユーザーのモバイル暗号資産取引アプリ。Solana memecoin特化。リテール層へのリーチが大きい。', descEn:'Mobile crypto trading app with 20M+ users. Solana memecoin focused. Large retail reach.', pitch:['other'], isNew:true},
     {name:'OnlyBulls', url:'#', cat:'コミュニティ', catEn:'Community', desc:'🆕 Bitcoinコミュニティ/イベント。ネットワーキング。', descEn:'Bitcoin community/events. Networking.', pitch:['other'], isNew:true},
     {name:'Bitplanet', url:'#', cat:'マイニング', catEn:'Mining', desc:'Bitcoinマイニング関連企業。2 Blockスポンサー。', descEn:'Bitcoin mining-related company. 2 Block sponsor.', logo:'69c1a897335755ce489787ec_bitplanet_blue.webp', pitch:['other'], isNew:true},
+    {name:'Peymon Freedom', url:'#', cat:'教育', catEn:'Education', desc:'Bitcoin 2026 2 Blockスポンサー。', descEn:'Bitcoin 2026 2 Block sponsor.', pitch:['other'], isNew:true},
+    {name:'Minotaur Trading Systems', url:'#', cat:'トレーディング', catEn:'Trading', desc:'トレーディングシステム提供。Bitcoin 2026 2 Blockスポンサー。', descEn:'Trading system provider. Bitcoin 2026 2 Block sponsor.', pitch:['other'], isNew:true},
   ],
   block1: [
     {name:'a16z crypto', url:'https://a16zcrypto.com/', cat:'VC・投資', catEn:'VC/Investment', desc:'Bitcoinおよびweb3スタートアップへの投資ファンド。STOトークンの有名名称活用の文脈でコンタクト価値あり。', descEn:'Investment fund for Bitcoin and web3 startups. Contact value for leveraging the a16z brand with STO token.', pitch:['sto'], isNew:false},
@@ -247,6 +253,11 @@ const sponsors = {
     {name:'Hangzhou CADRO Computing Technology Co., Ltd.', url:'#', cat:'マイニング機器', catEn:'Mining Equipment', desc:'マイニング・コンピューティング機器メーカー。', descEn:'Mining and computing equipment manufacturer.', logo:'69746d2f4d35d034a39155d1_ezgif-569afcce9931ddaa-1.webp', pitch:['other'], isNew:true},
     {name:'Heritage Auctions', url:'https://www.ha.com', cat:'オークション', catEn:'Auction', desc:'世界最大級のコレクタブルオークション。NFT・デジタル資産対応。', descEn:'One of the largest collectibles auction houses. NFT and digital asset-capable.', logo:'68fa8d2564aa595af3d3ec52_65d8cde11ce006b2c3ea74b1_ha-logo.webp', pitch:['other'], isNew:true},
     {name:'History of Bitcoin', url:'#', cat:'メディア', catEn:'Media', desc:'Bitcoin歴史コンテンツ/メディア。', descEn:'Bitcoin history content/media.', logo:'69b0b7a12b940d1843cd15ec_smashtoshi-logo-full-color-rgb-1500px-w-72ppi.webp', pitch:['other'], isNew:true},
+    {name:'AnchorWatch', url:'#', cat:'保険・カストディ', catEn:'Insurance/Custody', desc:'Bitcoin保険・カストディサービス。', descEn:'Bitcoin insurance and custody service.', pitch:['other'], isNew:true},
+    {name:'BlueCotton', url:'#', cat:'グッズ', catEn:'Merchandise', desc:'カスタムアパレル・Tシャツ製造。', descEn:'Custom apparel and T-shirt manufacturer.', pitch:['other'], isNew:true},
+    {name:'BTC Inc.', url:'#', cat:'メディア・カンファレンス', catEn:'Media/Conference', desc:'Bitcoin Magazine親会社。Bitcoin 2026カンファレンス主催。', descEn:'Parent of Bitcoin Magazine. Organizer of Bitcoin 2026 conference.', pitch:['other'], isNew:true},
+    {name:'Coin Stories', url:'#', cat:'メディア', catEn:'Media', desc:'Natalie BrunellのBitcoinポッドキャスト。', descEn:'Natalie Brunell\'s Bitcoin podcast.', pitch:['other'], isNew:true},
+    {name:'Ely and Co.', url:'#', cat:'法律', catEn:'Legal', desc:'Bitcoin/暗号資産関連法律サービス。', descEn:'Bitcoin/crypto-related legal services.', pitch:['other'], isNew:true},
   ]
 };
 
